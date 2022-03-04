@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Програма</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <div class="content first-content">
+            <form class="for-needed-info">
+                <div class="input-container">
+                    <label>Брой на паралелките</label>
+                    <input type="number" id="number-of-unique-classes" value="1"/>
+                </div>
+                
+                <div class="input-container">
+                    <label>Брой на учителите</label>
+                    <input type="number" id="number-of-teachers"/>
+                </div>
+
+                <button type="button" class="continue-button">Създай</button>
+            </form>
+        </div>
+
+        <datalist id="possible-subjects">
+            <option>Български език и литература</option>
+            <option>Математика</option>
+            <option>Биология</option>
+            <option>Физика</option>
+            <option>Химия</option>
+            <option>История</option>
+            <option>Музика</option>
+            <option>Изобразително изкуство</option>
+            <option>Физическо</option>
+            <option>Информационни технологии</option>
+            <option>Час на класа</option>
+        </datalist>
+
+        <datalist id="yes-or-no">
+            <option>Да</option>
+            <option>Не</option>
+        </datalist>
+
+        <script src="script.js" ></script>
+
+
+    </body>
+</html>

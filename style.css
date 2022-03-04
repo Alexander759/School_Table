@@ -1,0 +1,314 @@
+body {
+    background-color: rgb(52, 235, 211);
+    font-size: 2vw;
+    margin: 0px;
+
+}
+
+label {
+    color: black;
+    font-family: 'Libre Baskerville', Arial, sans-serif;
+}
+
+input{ 
+    border:0;
+    border-bottom: 1px solid rgb(34, 31, 248);  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size: 2vw;
+    color:#fff;
+  }
+
+input:focus{ 
+    border:none;	
+    outline:none;
+    border-bottom: 1px solid rgb(255, 0, 0);	
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.first-content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto, 50%, auto;
+    grid-template-rows: auto, 90%, auto;
+    height: 100vh;
+    grid-template-areas: 
+    ". . . "
+    ". e ."
+    ". . .";
+}
+
+.second-content {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+
+.for-needed-info {
+    width: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    grid-area: e;
+    grid-template-areas: 
+    "a "
+    "b"
+    "c";
+}
+
+.subjects {
+    border: 1px solid rgb(34, 31, 248);
+}
+
+.continue-button{
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: center;
+  grid-area: c;
+}
+
+.continue-button:active {
+  background-color: #006AE8;
+}
+
+.continue-button:hover {
+  background-color: #1C84FF;
+}
+
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+
+.subjects {
+    border: 1px solid rgb(34, 31, 248);
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+}
+
+.add-subject-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+.form-of-class {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+}
+
+.form-of-teacher {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+}
+
+.holder {
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.adding-class-subject-form {
+    visibility: hidden;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0, 0.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+  
+  .login-box button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
