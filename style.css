@@ -1,8 +1,7 @@
 body {
     background-color: rgb(52, 235, 211);
     font-size: 2vw;
-    margin: 0px;
-
+    margin: 0px;  
 }
 
 label {
@@ -16,6 +15,7 @@ input{
     background:transparent;
     width:100%;
     padding:8px 0 5px 0;
+    margin-bottom: 10px;
     font-size: 2vw;
     color:#fff;
   }
@@ -52,9 +52,11 @@ input[type=number] {
 }
 
 .second-content {
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32% 32% 32%;
     grid-template-rows: auto;
 }
 
@@ -68,11 +70,20 @@ input[type=number] {
     grid-template-areas: 
     "a "
     "b"
-    "c";
+    "c"
+    "d"
+    ;
 }
 
 .subjects {
     border: 1px solid rgb(34, 31, 248);
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-auto-rows: 33%;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
 }
 
 .continue-button{
@@ -100,7 +111,6 @@ input[type=number] {
   -webkit-user-select: none;
   touch-action: manipulation;
   justify-content: center;
-  grid-area: c;
 }
 
 .continue-button:active {
@@ -111,16 +121,41 @@ input[type=number] {
   background-color: #1C84FF;
 }
 
+.subject-box-in-lists {
+  background-color: rgb(34, 255, 34);
+  border-radius: 10px;
+  font-size: 65%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  overflow: auto;
+  margin: 10px;
+}
+
+.subject-box-in-lists p {
+  text-align: center;
+  margin: 0px;
+}
+
+.subject-box-in-lists::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: none;
+}
+
+.subject-box-in-lists::-webkit-scrollbar-thumb {
+  background: rgb(20, 173, 58); 
+  border-radius: 10px;
+}
+
+.subject-box-in-lists::-webkit-scrollbar-corner {
+  display: none;
+}
+
+
 .input-container{
 	position:relative;
 	margin-bottom:25px;
-}
-
-.subjects {
-    border: 1px solid rgb(34, 31, 248);
-    margin-top: 10px;
-    width: 100%;
-    height: 200px;
 }
 
 .add-subject-btn {
@@ -141,6 +176,12 @@ input[type=number] {
     grid-gap: 10px;
 }
 
+.form-of-classroom {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+}
+
 .holder {
     position: fixed;
     z-index: 100;
@@ -151,6 +192,15 @@ input[type=number] {
 
 .adding-class-subject-form {
     visibility: hidden;
+}
+
+.close-btn {
+  font-size: 30px;
+  margin: 0px;
+  margin-left: 90%;
+  color: aqua;
+  display: inline;
+  cursor: pointer;
 }
 
 .login-box {
@@ -266,6 +316,7 @@ input[type=number] {
     animation-delay: .25s
   }
   
+
   @keyframes btn-anim2 {
     0% {
       top: -100%;
@@ -304,6 +355,54 @@ input[type=number] {
     animation-delay: .75s
   }
   
+
+/* CSS */
+.button-create {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-create:hover,
+.button-create:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-create:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-create:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
   @keyframes btn-anim4 {
     0% {
       bottom: -100%;
